@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/benbjohnson/ego"
+	"github.com/FinalLevel/ego"
 )
 
 // version is set by the makefile during build.

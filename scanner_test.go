@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/benbjohnson/ego"
+	"github.com/FinalLevel/ego"
 )
 
 // Ensure that a text block can be scanned.

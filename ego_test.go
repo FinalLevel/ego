@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/benbjohnson/ego"
+	"github.com/FinalLevel/ego"
 )
 
 // Ensure that a template can be written to a writer.

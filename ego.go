@@ -155,7 +155,7 @@ func trimTrailingEmptyTextBlocks(a []Block) []Block {
 }
 
 func injectImports(f *ast.File) {
-	names := []string{`"fmt"`, `"html"`, `"io"`, `"context"`}
+	names := []string{`"fmt"`, `"html"`, `"io"`}
 
 	// Strip packages from existing imports.
 	for i := 0; i < len(f.Decls); i++ {
@@ -197,12 +197,6 @@ func injectImports(f *ast.File) {
 		Tok: token.VAR,
 		Specs: []ast.Spec{
 			&ast.ValueSpec{Names: []*ast.Ident{{Name: "_"}}, Type: &ast.Ident{Name: "io.Reader"}},
-		},
-	})
-	f.Decls = append(f.Decls, &ast.GenDecl{
-		Tok: token.VAR,
-		Specs: []ast.Spec{
-			&ast.ValueSpec{Names: []*ast.Ident{{Name: "_"}}, Type: &ast.Ident{Name: "context.Context"}},
 		},
 	})
 	f.Decls = append(f.Decls, &ast.GenDecl{
